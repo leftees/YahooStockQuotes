@@ -3,6 +3,15 @@ Yahoo Stock Quotes in PHP
 
 [![Build Status](https://travis-ci.org/aensley/YahooStockQuotes.svg)](https://travis-ci.org/aensley/YahooStockQuotes) [![MIT License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/aensley/YahooStockQuotes/blob/master/LICENSE)
 
+## What it does
+
+This library makes it simple to access any number of stock prices (and their changes) in your code. It limits itself to one update per day to save your server's (and Yahoo's) resources. It consists of one code file and one cache file. No database necessary.
+
+Merely set the [`$stockSymbols`](https://github.com/aensley/YahooStockQuotes/blob/master/stockQuotes.php#L17) array to your list of desired stocks' symbols, include the file, and use the [three public functions](#example-usage) where you need them.
+
+Simple.
+
+
 ## Requirements
 
 There must be a `stockQuotes.json` file in the same directory as the `stockQuotes.php` file. 

@@ -109,13 +109,13 @@ class StockQuotes {
 		$url = str_replace('%QUERY%', urlencode($query), $url);
 		$data = @file_get_contents($url);
 		if (!$data && function_exists('curl_init')) {
-			$ch = curl_init();
+			$curlResource = curl_init();
 			$timeout = 5; // set to zero for no timeout
-			curl_setopt($ch, CURLOPT_URL, $url);
-			curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-			curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, $timeout);
-			$data = curl_exec($ch);
-			curl_close($ch);
+			curl_setopt($curlResource, CURLOPT_URL, $url);
+			curl_setopt($curlResource, CURLOPT_RETURNTRANSFER, 1);
+			curl_setopt($curlResource, CURLOPT_CONNECTTIMEOUT, $timeout);
+			$data = curl_exec($curlResource);
+			curl_close($curlResource);
 		}
 
 		if ($data) {
@@ -194,9 +194,9 @@ class StockQuotes {
 				'price' => 'Unknown',
 				'change' => 'Unknown'
 			);
-		} else {
-			return $this->data['stocks'][$symbol];
 		}
+		
+		return $this->data['stocks'][$symbol];
 	}
 
 

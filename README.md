@@ -1,7 +1,7 @@
 # YahooStockQuotes
 Yahoo Stock Quotes in PHP
 
-[![Build Status](https://travis-ci.org/aensley/YahooStockQuotes.svg)](https://travis-ci.org/aensley/YahooStockQuotes) [![MIT License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/aensley/YahooStockQuotes/blob/master/LICENSE)
+[![MIT License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/aensley/YahooStockQuotes/blob/master/LICENSE) [![Build Status](https://travis-ci.org/aensley/YahooStockQuotes.svg)](https://travis-ci.org/aensley/YahooStockQuotes) [![Code Climate](https://codeclimate.com/github/aensley/YahooStockQuotes/badges/gpa.svg)](https://codeclimate.com/github/aensley/YahooStockQuotes) [![Test Coverage](https://codeclimate.com/github/aensley/YahooStockQuotes/badges/coverage.svg)](https://codeclimate.com/github/aensley/YahooStockQuotes/coverage) [![Issue Count](https://codeclimate.com/github/aensley/YahooStockQuotes/badges/issue_count.svg)](https://codeclimate.com/github/aensley/YahooStockQuotes)
 
 ## What it does
 

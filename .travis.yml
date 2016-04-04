@@ -7,6 +7,9 @@ php:
 
 script: phpunit
 
+after_success:
+  - bash <(curl -s https://codecov.io/bash
+
 addons:
     code_climate:
         repo_token: bbfdb645b94f06594142fc420eaf1f35e31e41532e075cbee313cd2287817f93

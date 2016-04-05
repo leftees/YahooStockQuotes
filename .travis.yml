@@ -12,7 +12,7 @@ before_script:
   - php composer.phar install -n
 
 after_script:
-  - php vendor/bin/codacycoverage clover path/to/clover.xml
+  - php vendor/bin/codacycoverage clover build/logs/clover.xml
 
 after_success:
   - bash <(curl -s https://codecov.io/bash)

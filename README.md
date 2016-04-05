@@ -1,7 +1,9 @@
 # YahooStockQuotes
 Yahoo Stock Quotes in PHP
 
-[![MIT License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/aensley/YahooStockQuotes/blob/master/LICENSE) [![Build Status](https://travis-ci.org/aensley/YahooStockQuotes.svg)](https://travis-ci.org/aensley/YahooStockQuotes) [![Code Climate](https://codeclimate.com/github/aensley/YahooStockQuotes/badges/gpa.svg)](https://codeclimate.com/github/aensley/YahooStockQuotes) [![Test Coverage](https://codeclimate.com/github/aensley/YahooStockQuotes/badges/coverage.svg)](https://codeclimate.com/github/aensley/YahooStockQuotes/coverage) [![Issue Count](https://codeclimate.com/github/aensley/YahooStockQuotes/badges/issue_count.svg)](https://codeclimate.com/github/aensley/YahooStockQuotes)
+[![MIT License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/aensley/YahooStockQuotes/blob/master/LICENSE) [![Build Status](https://travis-ci.org/aensley/YahooStockQuotes.svg)](https://travis-ci.org/aensley/YahooStockQuotes) [![Code Climate](https://codeclimate.com/github/aensley/YahooStockQuotes/badges/gpa.svg)](https://codeclimate.com/github/aensley/YahooStockQuotes) [![Test Coverage](https://codeclimate.com/github/aensley/YahooStockQuotes/badges/coverage.svg)](https://codeclimate.com/github/aensley/YahooStockQuotes/coverage) [![Issue Count](https://codeclimate.com/github/aensley/YahooStockQuotes/badges/issue_count.svg)](https://codeclimate.com/github/aensley/YahooStockQuotes) [![Codacy Badge](https://api.codacy.com/project/badge/grade/753efb995ff64b9087cf2e4952e91038)](https://www.codacy.com/app/awensley/YahooStockQuotes) [![Codacy Badge](https://api.codacy.com/project/badge/coverage/753efb995ff64b9087cf2e4952e91038)](https://www.codacy.com/app/awensley/YahooStockQuotes)
+
+
 
 ## What it does
 

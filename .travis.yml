@@ -7,6 +7,13 @@ php:
 
 script: phpunit
 
+before_script:
+  - curl -s http://getcomposer.org/installer | php
+  - php composer.phar install -n
+
+after_script:
+  - php vendor/bin/codacycoverage clover path/to/clover.xml
+
 after_success:
   - bash <(curl -s https://codecov.io/bash)
 

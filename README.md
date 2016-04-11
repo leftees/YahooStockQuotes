@@ -7,18 +7,18 @@ Yahoo Stock Quotes in PHP
 
 ## What it does
 
-This library makes it simple to access any number of stock prices (and their changes) in your code. It limits itself to one update per day to save your server's (and Yahoo's) resources. It consists of [one code file](https://github.com/aensley/YahooStockQuotes/blob/master/stockQuotes.php) and [one cache file](https://github.com/aensley/YahooStockQuotes/blob/master/stockQuotes.json). No database necessary.
+This library makes it simple to access any number of stock prices (and their changes) in your code. It limits itself to one update per day to save your server's (and Yahoo's) resources. It consists of [one code file](https://github.com/aensley/YahooStockQuotes/blob/master/Aensley/YahooStockQuotes/YahooStockQuotes.php) and [one cache file](https://github.com/aensley/YahooStockQuotes/blob/master/Aensley/YahooStockQuotes/YahooStockQuotes.json). No database necessary.
 
-Merely set the [`$stockSymbols`](https://github.com/aensley/YahooStockQuotes/blob/master/stockQuotes.php#L17) array to your list of desired stocks' symbols, include the file, and use the [three public functions](#example-usage) where you need them.
+Merely pass an array of your desired stocks' symbols to the [`YahooStockQuotes` constructor](https://github.com/aensley/YahooStockQuotes/blob/master/Aensley/YahooStockQuotes/YahooStockQuotes.php#L17) and use the [three public functions](#example-usage) where you need them.
 
 Simple.
 
 
 ## Requirements
 
-There must be a `stockQuotes.json` file in the same directory as the `stockQuotes.php` file. 
+There must be a `YahooStockQuotes.json` file in the same directory as the `YahooStockQuotes.php` file. 
 
-`stockQuotes.json` must be **WRITABLE** by the user who owns the PHP process (apache, www-data, nginx, hhvm, etc.).
+`YahooStockQuotes.json` must be **WRITABLE** by the user who owns the PHP process (apache, www-data, nginx, hhvm, etc.).
 
 If the file does not exist or is not writable, every page view will require a new request to Yahoo's servers, which will slow down all page views drastically and get your server blocked by Yahoo.
 
@@ -28,7 +28,9 @@ If the file does not exist or is not writable, every page view will require a ne
 ```php
 <?php
 
-include 'stockQuotes.php';
+include 'YahooStockQuotes.php';
+$stockSymbols = array('YHOO');
+$stockQuotes = new \Aensley\YahooStockQuotes\YahooStockQuotes($stockSymbols);
 
 ?><html>
 	<head>

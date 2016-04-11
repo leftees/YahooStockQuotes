@@ -17,19 +17,19 @@ class YahooStockQuotesTest extends \PHPUnit_Framework_TestCase {
 
 	public function testGetPrice() {
 		$price = $this->stockQuotes->getPrice($this->symbol);
-		$this->assertString($price);
+		$this->assertInternalType('string', $price);
 		$this->assertRegExp('/^\$\d+(?:,\d{3})?\.\d{2}$/', $price);
 	}
 
 	public function testGetChange() {
 		$change = $this->stockQuotes->getChange($this->symbol);
-		$this->assertString($change);
+		$this->assertInternalType('string', $change);
 		$this->assertRegExp('/^[+-]\d+\.\d{2}%$/', $change);
 	}
 
 	public function testGetUpdatedDate() {
 		$date = $this->stockQuotes->getUpdatedDate('Y-m-d H:i:s');
-		$this->assertString($date);
+		$this->assertInternalType('string', $date);
 		$this->assertRegExp('^\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}$/', $date);
 	}
 }

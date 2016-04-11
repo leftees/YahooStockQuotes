@@ -11,6 +11,9 @@
 			"homepage": "https://andrewensley.com"
 		}
 	],
+	"autoload": {
+		"psr-0": { "Aensley\\": "" }
+	},
 	"require": {
 		"php": ">=5.5.0"
 	},

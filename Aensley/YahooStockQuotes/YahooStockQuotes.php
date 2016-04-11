@@ -1,27 +1,28 @@
 <?php
+
+namespace Aensley\YahooStockQuotes;
+
 /**
- * StockQuotes class to retrieve quote data from Yahoo's API.
+ * Yahoo Stock Quotes class to retrieve quote data from Yahoo's API.
  *
- * @package    StockQuotes
+ * @package    Aensley/YahooStockQuotes
  * @author     Andrew Ensley
- * @version    1.0.0
- * @date       3/9/16
  */
-class StockQuotes {
+class YahooStockQuotes {
 
 	/**
-	 * The array of stock symbols to retrieve. CHANGE TO WHAT YOU NEED.
+	 * The array of stock symbols to retrieve.
 	 *
 	 * @var array
 	 */
-	private $stockSymbols = array('YHOO');
+	private $stockSymbols = array();
 
 	/**
 	 * Name of file where stock data is cached.
 	 *
 	 * @var string
 	 */
-	private $fileName = 'stockQuotes.json';
+	private $fileName = 'YahooStockQuotes.json';
 
 	/**
 	 * Associative array containing stock data.
@@ -61,9 +62,16 @@ class StockQuotes {
 
 	/**
 	 * Creates the StockQuote object.
+	 *
+	 * @param array $symbols An array of desired stock symbols to retrieve.
 	 */
-	public function __construct()
+	public function __construct($symbols = array())
 	{
+		if (empty($symbols) || !is_array($symbols)) {
+			return;
+		}
+
+		$this->stockSymbols = $symbols;
 		$this->fileName = dirname(realpath(__FILE__)) . '/' . $this->fileName;
 		$this->getCachedData();
 		if (!$this->isCurrent()) {
@@ -195,7 +203,7 @@ class StockQuotes {
 				'change' => 'Unknown'
 			);
 		}
-		
+
 		return $this->data['stocks'][$symbol];
 	}
 
@@ -240,5 +248,3 @@ class StockQuotes {
 		return (empty($this->data['timestamp']) ? 'Unknown' : date($format, $this->data['timestamp']));
 	}
 }
-
-$stockQuotes = new StockQuotes();

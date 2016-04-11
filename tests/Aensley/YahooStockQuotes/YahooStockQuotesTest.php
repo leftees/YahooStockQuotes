@@ -30,6 +30,6 @@ class YahooStockQuotesTest extends \PHPUnit_Framework_TestCase {
 	public function testGetUpdatedDate() {
 		$date = $this->stockQuotes->getUpdatedDate('Y-m-d H:i:s');
 		$this->assertInternalType('string', $date);
-		$this->assertRegExp('^\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}$/', $date);
+		$this->assertRegExp('^\d{4}-\d{2}-\d{2}\s\d{2}:\d{2}:\d{2}$/', $date);
 	}
 }

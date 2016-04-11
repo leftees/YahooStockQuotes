@@ -129,7 +129,14 @@ class YahooStockQuotes {
 		if ($data) {
 			$data = json_decode($data, true);
 			if (!empty($data) && !empty($data['query']['results']['quote'])) {
-				foreach ($data['query']['results']['quote'] as $quote) {
+				$quotes = $data['query']['results']['quote'];
+				// Is this an associative array?
+				if (array_keys($quotes) !== range(0, count($quotes) - 1)) {
+					// Yes, we were given a single quote not contained in a 0-indexed array. Make it one.
+					$quotes = array($quotes);
+				}
+
+				foreach ($quotes as $quote) {
 					$this->setSingleStock($quote['symbol'], $quote['LastTradePriceOnly'], $quote['ChangeinPercent'], $quote['LastTradeDate'], $quote['LastTradeTime']);
 				}
 

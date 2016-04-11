@@ -3,7 +3,33 @@
 use \Aensley\YahooStockQuotes\YahooStockQuotes;
 
 class YahooStockQuotesTest extends \PHPUnit_Framework_TestCase {
-	function testInstantiation() {
-		$this->assertInstanceOf('\Aensley\YahooStockQuotes\YahooStockQuotes', new YahooStockQuotes);
+
+	public $symbol = 'YHOO';
+	public $stockQuotes;
+
+	protected function setUp() {
+		$this->stockQuotes = new YahooStockQuotes(array($this->symbol));
+	}
+
+	public function testInstantiation() {
+		$this->assertInstanceOf('\Aensley\YahooStockQuotes\YahooStockQuotes', $this->stockQuotes);
+	}
+
+	public function testGetPrice() {
+		$price = $this->stockQuotes->getPrice($this->symbol);
+		$this->assertString($price);
+		$this->assertRegExp('/^\$\d+(?:,\d{3})?\.\d{2}$/', $price);
+	}
+
+	public function testGetChange() {
+		$change = $this->stockQuotes->getChange($this->symbol);
+		$this->assertString($change);
+		$this->assertRegExp('/^[+-]\d+\.\d{2}%$/', $change);
+	}
+
+	public function testGetUpdatedDate() {
+		$date = $this->stockQuotes->getUpdatedDate('Y-m-d H:i:s');
+		$this->assertString($date);
+		$this->assertRegExp('^\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}$/', $date);
 	}
 }

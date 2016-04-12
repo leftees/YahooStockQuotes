@@ -5,12 +5,12 @@ php:
   - 7.0
   - hhvm
 
-script: phpunit
-
-before_script:
+install:
   - composer install -n
 
-after_script:
+script: phpunit
+
+after_success:
   - bash <(curl -s https://codecov.io/bash)
   - vendor/bin/codacycoverage clover build/logs/clover.xml
   - vendor/bin/test-reporter

@@ -30,15 +30,15 @@ class YahooStockQuotesTest extends \PHPUnit_Framework_TestCase {
 	public function testGetPrice() {
 		$price = $this->stockQuotes->getPrice($this->symbol);
 		$this->assertInternalType('string', $price);
-		// Example: $10.31 or $234,563.43
-		$this->assertRegExp('/^\$\d+(?:,\d{3})?\.\d{2}$/', $price);
+		// Example: $10.31 or $234,563.433333
+		$this->assertRegExp('/^\$\d+(?:,\d{3})?\.\d+$/', $price);
 	}
 
 	public function testGetChange() {
 		$change = $this->stockQuotes->getChange($this->symbol);
 		$this->assertInternalType('string', $change);
-		// Example: +13.38% or -0.02%
-		$this->assertRegExp('/^[+-]\d+\.\d{2}%$/', $change);
+		// Example: +13.38% or -0.0002%
+		$this->assertRegExp('/^[+-]\d+\.\d+%$/', $change);
 	}
 
 	public function testGetUpdatedDate() {

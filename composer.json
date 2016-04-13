@@ -4,7 +4,7 @@
 	"license": "MIT",
 	"homepage": "https://github.com/aensley/YahooStockQuotes/",
 	"description": "Quick and dirty Yahoo stock quotes in PHP",
-	"keywords": ["yahoo", "stock"],
+	"keywords": ["yahoo", "yahoo-api", "yahoo-finance", "stock", "stockquotes"],
 	"authors": [
 		{
 			"name": "Andrew Ensley",

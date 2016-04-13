@@ -1,10 +1,11 @@
 # YahooStockQuotes
 Yahoo Stock Quotes in PHP
 
-[![MIT License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/aensley/YahooStockQuotes/blob/master/LICENSE) [![Build Status](https://travis-ci.org/aensley/YahooStockQuotes.svg)](https://travis-ci.org/aensley/YahooStockQuotes) [![Code Climate Grade](https://codeclimate.com/github/aensley/YahooStockQuotes/badges/gpa.svg)](https://codeclimate.com/github/aensley/YahooStockQuotes) [![Code Climate Issue Count](https://codeclimate.com/github/aensley/YahooStockQuotes/badges/issue_count.svg)](https://codeclimate.com/github/aensley/YahooStockQuotes) [![Codacy Grade](https://api.codacy.com/project/badge/grade/753efb995ff64b9087cf2e4952e91038)](https://www.codacy.com/app/awensley/YahooStockQuotes)
+[![MIT License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/aensley/YahooStockQuotes/blob/master/LICENSE) [![Build Status](https://travis-ci.org/aensley/YahooStockQuotes.svg)](https://travis-ci.org/aensley/YahooStockQuotes) [![HHVM Test Status](https://img.shields.io/hhvm/aensley/yahoo-stock-quotes.svg?maxAge=2592000)](http://hhvm.h4cc.de/package/aensley/yahoo-stock-quotes)
+
+[![Code Climate Grade](https://codeclimate.com/github/aensley/YahooStockQuotes/badges/gpa.svg)](https://codeclimate.com/github/aensley/YahooStockQuotes) [![Code Climate Issue Count](https://codeclimate.com/github/aensley/YahooStockQuotes/badges/issue_count.svg)](https://codeclimate.com/github/aensley/YahooStockQuotes) [![Codacy Grade](https://api.codacy.com/project/badge/grade/753efb995ff64b9087cf2e4952e91038)](https://www.codacy.com/app/awensley/YahooStockQuotes) [![SensioLabsInsight](https://img.shields.io/sensiolabs/i/bc0dd7ac-b413-44a3-bcb4-55e2ab1808d9.svg?maxAge=2592000)](https://insight.sensiolabs.com/projects/bc0dd7ac-b413-44a3-bcb4-55e2ab1808d9)
 
 [![Code Climate Test Coverage](https://codeclimate.com/github/aensley/YahooStockQuotes/badges/coverage.svg)](https://codeclimate.com/github/aensley/YahooStockQuotes/coverage) [![Codacy Test Coverage](https://api.codacy.com/project/badge/coverage/753efb995ff64b9087cf2e4952e91038)](https://www.codacy.com/app/awensley/YahooStockQuotes) [![Codecov.io Test Coverage](https://codecov.io/github/aensley/YahooStockQuotes/coverage.svg?branch=master)](https://codecov.io/github/aensley/YahooStockQuotes?branch=master) [![Coveralls Test Coverage](https://coveralls.io/repos/github/aensley/YahooStockQuotes/badge.svg?branch=master)](https://coveralls.io/github/aensley/YahooStockQuotes?branch=master)
-
 
 
 ## What it does
@@ -50,4 +51,4 @@ $stockQuotes = new \Aensley\YahooStockQuotes\YahooStockQuotes($stockSymbols);
 
 ----
 
-[![Supercharged by ZenHub.io](https://raw.githubusercontent.com/ZenHubIO/support/master/zenhub-badge.png)](https://zenhub.io)
+[![Supercharged by ZenHub.io](https://raw.githubusercontent.com/ZenHubIO/support/master/zenhub-badge.svg)](https://zenhub.io)

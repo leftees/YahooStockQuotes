@@ -118,10 +118,14 @@ class YahooStockQuotes {
 		$data = @file_get_contents($url);
 		if (!$data && function_exists('curl_init')) {
 			$curlResource = curl_init();
-			$timeout = 5; // set to zero for no timeout
-			curl_setopt($curlResource, CURLOPT_URL, $url);
-			curl_setopt($curlResource, CURLOPT_RETURNTRANSFER, 1);
-			curl_setopt($curlResource, CURLOPT_CONNECTTIMEOUT, $timeout);
+			curl_setopt_array(
+				$curlResource,
+				array(
+					CURLOPT_URL => $url,
+					CURLOPT_RETURNTRANSFER => 1,
+					CURLOPT_CONNECTTIMEOUT => 5,
+				)
+			);
 			$data = curl_exec($curlResource);
 			curl_close($curlResource);
 		}

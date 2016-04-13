@@ -5,8 +5,13 @@ php:
   - 7.0
   - hhvm
 
-install:
-  - composer install --dev --no-interaction
+matrix:
+  allow_failures:
+    - php: hhvm
+
+install: composer install --dev --no-interaction
+
+before_script: phpenv config-add testphpconfig.ini
 
 script: phpunit
 

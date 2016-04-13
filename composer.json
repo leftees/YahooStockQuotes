@@ -20,7 +20,6 @@
 	"require-dev": {
 		"codacy/coverage": "dev-master",
 		"codeclimate/php-test-reporter": "dev-master",
-		"satooshi/php-coveralls": "dev-master",
 		"phpunit/phpcov": "2.*"
 	}
 }

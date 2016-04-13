@@ -6,11 +6,17 @@ php:
   - hhvm
 
 install:
-  - composer install -n
+  - composer install --dev --no-interaction
 
 script: phpunit
 
 after_success:
+  # Codecov.io
   - bash <(curl -s https://codecov.io/bash)
+  # Codacy.com
   - vendor/bin/codacycoverage clover build/logs/clover.xml
+  # CodeClimate.com
   - vendor/bin/test-reporter
+  # Coveralls.io
+  - vendor/bin/phpcov.php merge --clover build/logs/clover.xml build/cov
+  - vendor/bin/coveralls

@@ -18,13 +18,12 @@ before_script:
 script: phpunit
 
 after_success:
-  # Combine logs for compatibility
-  - vendor/bin/phpcov.php merge --clover build/logs/clover.xml build/cov
+  # CodeClimate.com
+  - vendor/bin/test-reporter
   # Codecov.io
   - bash <(curl -s https://codecov.io/bash)
   # Codacy.com
   - vendor/bin/codacycoverage clover build/logs/clover.xml
-  # CodeClimate.com
-  - vendor/bin/test-reporter
   # Coveralls.io
+  - vendor/bin/phpcov.php merge --clover build/logs/clover.xml build/cov
   - vendor/bin/coveralls

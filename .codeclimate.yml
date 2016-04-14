@@ -8,8 +8,16 @@ engines:
     enabled: true
   phpmd:
     enabled: true
+  phpcodesniffer:
+    enabled: true
+    config:
+      standard: "PSR0,PSR1,PSR2"
+  markdownlint:
+    enabled: true
 ratings:
   paths:
   - "**.php"
+  - "**.md"
 exclude_paths:
 - tests/
+- vendor/
